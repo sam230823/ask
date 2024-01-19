@@ -8,13 +8,73 @@
 </head>
 <body>
     <div class="wrapper">
-        <h2 class="question">will u go on a date with this puppy ?? 🐶</h2>
-        <img class="gif" alt="gif" src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExZWoxZDkycjB3ODFhaGU1cWg1c3ZveGtycHMwcmV5N2dleGF5MjNjYiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/oRcZirBJr5Jhm2M3sG/giphy.gif"/>
-        <div class="btn-group">
-            <button class="yes-btn">Yes</button>
-            <button class="no-btn">No</button>
+        <!-- Page 1 -->
+        <div id="page1">
+            <h2 class="question">Is this Satvika?</h2>
+            <img class="gif" alt="gif" src="https://media.giphy.com/media/Q1KQSuMd948XO0qAHL/giphy.gif"/>
+            <div class="btn-group">
+                <button class="yes-btn" onclick="showDatePage()">I am</button>
+                <button class="not-btn" onclick="showLyingPage()">Nah who is that</button>
+            </div>
+        </div>
+
+        <!-- Page 2 -->
+        <div id="page2" style="display: none;">
+            <h2 class="question">Lying is bad! 🥺🥺</h2>
+            <img class="gif" alt="gif" src="https://media.giphy.com/media/pRk0odg60oAXOKybMh/giphy.gif"/>
+            <div class="btn-group">
+                <button class="back-btn" onclick="showPage1()">Go Back</button>
+            </div>
+        </div>
+
+        <!-- Page 3 -->
+        <div id="page3" style="display: none;">
+            <h2 class="question">Will you go on a date with this puppy? 🐶</h2>
+            <img class="gif" alt="gif" src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExZWoxZDkycjB3ODFhaGU1cWg1c3ZveGtycHMwcmV5N2dleGF5MjNjYiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/oRcZirBJr5Jhm2M3sG/giphy.gif"/>
+            <div class="btn-group">
+                <button class="yes-btn" onclick="showExcitedPage()">Yes</button>
+                <button class="no-btn" onclick="showPage1()">No</button>
+            </div>
+        </div>
+
+        <!-- Page 4 -->
+        <div id="page4" style="display: none;">
+            <h2 class="question">Yay! Let's go! Love uuu 🐶</h2>
+            <img class="gif" alt="gif" src="https://media.giphy.com/media/KJRQnFbr2iSCPQpry5/giphy.gif"/>
+            <div class="btn-group">
+                <button class="back-btn" onclick="showPage1()">Go Back</button>
+            </div>
         </div>
     </div>
     <script src="script.js"></script>
+    <script>
+        function showLyingPage() {
+            document.getElementById("page1").style.display = "none";
+            document.getElementById("page2").style.display = "block";
+            document.getElementById("page3").style.display = "none";
+            document.getElementById("page4").style.display = "none";
+        }
+
+        function showPage1() {
+            document.getElementById("page1").style.display = "block";
+            document.getElementById("page2").style.display = "none";
+            document.getElementById("page3").style.display = "none";
+            document.getElementById("page4").style.display = "none";
+        }
+
+        function showDatePage() {
+            document.getElementById("page1").style.display = "none";
+            document.getElementById("page2").style.display = "none";
+            document.getElementById("page3").style.display = "block";
+            document.getElementById("page4").style.display = "none";
+        }
+
+        function showExcitedPage() {
+            document.getElementById("page1").style.display = "none";
+            document.getElementById("page2").style.display = "none";
+            document.getElementById("page3").style.display = "none";
+            document.getElementById("page4").style.display = "block";
+        }
+    </script>
 </body>
 </html>
