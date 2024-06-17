@@ -5,9 +5,9 @@ const yesBtn = document.querySelector(".yes-btn");
 const noBtn = document.querySelector(".no-btn");
 
 yesBtn.addEventListener("click", () => {
-  question.innerHTML ="<h1>lub uuuuuu  (happy puppy noises)</h1>";
+  question.innerHTML ="<h1>boiiii</h1>";
   gif.src =
-    "https://media.giphy.com/media/KJRQnFbr2iSCPQpry5/giphy.gif";
+    "https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExM3liOXM3djg1cnA3MHNra2ZvaTZ4eGN0dzZ6MG0yOGd5cmtlemRjdyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3ohc0QQkTH6YK8g4zS/giphy.gif";
 });
 
 noBtn.addEventListener("mouseover", () => {
